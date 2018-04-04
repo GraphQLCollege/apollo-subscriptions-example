@@ -16,7 +16,7 @@ import { ApolloLink } from "apollo-link";
 import { WebSocketLink } from "apollo-link-ws";
 
 const wsLink = new WebSocketLink({
-  uri: `ws://localhost:3001/subscriptions`,
+  uri: process.env.REACT_APP_WS_URI,
   options: {
     reconnect: true
   }
@@ -35,7 +35,7 @@ const client = new ApolloClient({
     }),
     wsLink,
     new HttpLink({
-      uri: "http://localhost:3001/graphql",
+      uri: process.env.REACT_APP_API_URI,
       credentials: "same-origin"
     })
   ]),
