@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
 const { makeExecutableSchema } = require("graphql-tools");
@@ -57,6 +58,8 @@ const schema = makeExecutableSchema({
   resolvers
 });
 const server = express();
+
+server.use(cors());
 
 server.use("/graphql", bodyParser.json(), graphqlExpress({ schema }));
 
