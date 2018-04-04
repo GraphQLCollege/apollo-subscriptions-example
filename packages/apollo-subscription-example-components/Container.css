@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+  .App {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+/* Font stack: https://gist.github.com/nagelflorian/9dba284f8348358d9c0d8979aa296671 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #211922;
+  font-size: 12px;
+}
+a {
+  color: #717171;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}

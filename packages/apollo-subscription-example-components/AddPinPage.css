@@ -1,0 +1,20 @@
+.add-pin button {
+  background-color: #bd081c;
+  cursor: pointer;
+  padding: 11px 14px;
+  border-radius: 4px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.add-pin h3 {
+  margin-bottom: 30px;
+}
+
+.add-pin {
+  padding: 1rem;
+  padding-bottom: 64px;
+}

@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+nav button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  margin: 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.input {
+  border-color: #b5b5b5;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  max-height: 40px;
+  padding: 10px 14px;
+  font-size: 16px;
+}
