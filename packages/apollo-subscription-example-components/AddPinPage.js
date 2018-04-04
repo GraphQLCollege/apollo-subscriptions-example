@@ -45,7 +45,7 @@ class AddPinPage extends React.Component {
             value={this.state.link}
             onChange={event => this.setState({ link: event.target.value })}
             placeholder="URL"
-            type="text"
+            type="url"
             required
           />
           <input
@@ -57,7 +57,7 @@ class AddPinPage extends React.Component {
               });
             }}
             placeholder="Image URL"
-            type="text"
+            type="url"
             required
           />
           <button type="submit">
