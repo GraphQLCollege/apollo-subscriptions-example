@@ -39,7 +39,8 @@ module.exports = {
       host: process.env.DBHOST,
       database: process.env.DB,
       user: process.env.DBUSER,
-      password: process.env.DBPASSWORD
+      password: process.env.DBPASSWORD,
+      ssl: true
     },
     pool: {
       min: 2,
