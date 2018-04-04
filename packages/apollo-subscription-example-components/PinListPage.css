@@ -1,12 +1,13 @@
 .pin img {
   object-fit: cover;
-  flex: 1;
+  height: 90%;
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
 }
 .pin {
   display: flex;
+  max-height: 400px;
 }
 .pin a {
   width: 100%;
@@ -19,6 +20,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 200px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 .pins {
   display: grid;
