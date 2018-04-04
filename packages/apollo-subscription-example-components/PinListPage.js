@@ -12,7 +12,19 @@ function stringToColor(str) {
 }
 
 class PinListPage extends React.Component {
+  componentDidUpdate({ pins }) {
+    if (
+      this.props.pins.length !== pins &&
+      this.lastElement &&
+      pins.length !== 0 // Only scroll on updates. Don't scroll in the first request
+    ) {
+      this.lastElement.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   render() {
+    if (!this.props.match) {
+      return null;
+    }
     return (
       <div>
         {this.props.pins.length === 0 && (
@@ -31,7 +43,15 @@ class PinListPage extends React.Component {
         )}
         <ul className="pins">
           {this.props.pins.map((pin, index) => (
-            <li className="pin" key={index}>
+            <li
+              className="pin"
+              key={index}
+              ref={element => {
+                if (element && index === this.props.pins.length - 1) {
+                  this.lastElement = element;
+                }
+              }}
+            >
               <a href={pin.link} target="_blank">
                 <img
                   src={pin.image}
@@ -53,5 +73,9 @@ class PinListPage extends React.Component {
 }
 
 export default ({ pins = [] }) => (
-  <Route exact path="/" render={() => <PinListPage pins={pins} />} />
+  // Render PinListPage as children instead of using react router's render or component props
+  // The reason is that those other options mount/unmount the component, which would not trigger componentDidUpdate
+  <Route exact path="/">
+    {({ match }) => <PinListPage pins={pins} match={match} />}
+  </Route>
 );
