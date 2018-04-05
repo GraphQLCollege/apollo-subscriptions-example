@@ -1,6 +1,8 @@
 # Apollo Subscriptions Example
 
-Simple example showing how to setup Apollo Subscriptions.
+![Example](./pinapp.gif)
+
+Pinterest style example showing how to setup Apollo Subscriptions.
 
 ## Technologies
 
@@ -20,12 +22,12 @@ Simple example showing how to setup Apollo Subscriptions.
 
 ## Getting started
 
-Requirements:
+### Requirements
 
 * Nodejs
 * Postgres
 
-Installation:
+### Installation
 
 ```sh
 # Clone repo
