@@ -4,6 +4,8 @@
 
 Pinterest style example showing how to setup Apollo Subscriptions.
 
+Blog post: https://www.graphql.college/graphql-subscriptions-with-react-node-apollo-and-postgres/
+
 ## Technologies
 
 ⚛️ React
