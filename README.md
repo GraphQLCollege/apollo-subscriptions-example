@@ -33,7 +33,7 @@ Blog post: https://www.graphql.college/graphql-subscriptions-with-react-node-apo
 
 ```sh
 # Clone repo
-git clone git@github.com:GraphQLCollege/apollo-subscriptions-example.git
+git clone https://github.com/GraphQLCollege/apollo-subscriptions-example.git
 # Install server dependencies
 cd packages/server && yarn
 # Setup environment variables
